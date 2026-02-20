@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorFlow - Productivity Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-8">
+          <h1 class="text-xl font-bold text-gray-900">CreatorFlow</h1>
+          <div class="hidden md:flex space-x-1">
+            <button onclick="navigateTo('dashboard')" class="nav-btn px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors" data-page="dashboard">Dashboard</button>
+            <button onclick="navigateTo('inbox')" class="nav-btn px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors" data-page="inbox">Idea Inbox</button>
+            <button onclick="navigateTo('tasks')" class="nav-btn px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors" data-page="tasks">Task Board</button>
+            <button onclick="navigateTo('build')" class="nav-btn px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors" data-page="build">Build Tracker</button>
+            <button onclick="navigateTo('ship')" class="nav-btn px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors" data-page="ship">Ship Log</button>
+          </div>
+        </div>
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-600 hover:text-gray-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200">
+      <div class="px-4 py-3 space-y-1">
+        <button onclick="navigateTo('dashboard')" class="mobile-nav-btn w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg" data-page="dashboard">Dashboard</button>
+        <button onclick="navigateTo('inbox')" class="mobile-nav-btn w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg" data-page="inbox">Idea Inbox</button>
+        <button onclick="navigateTo('tasks')" class="mobile-nav-btn w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg" data-page="tasks">Task Board</button>
+        <button onclick="navigateTo('build')" class="mobile-nav-btn w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg" data-page="build">Build Tracker</button>
+        <button onclick="navigateTo('ship')" class="mobile-nav-btn w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg" data-page="ship">Ship Log</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Content will be dynamically loaded here -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
